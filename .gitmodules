@@ -1,0 +1,24 @@
+[submodule "agro-core"]
+	path = agro-core
+	url = https://github.com/beatrizsantiago/agro-core
+[submodule "siscop-production"]
+	path = siscop-production
+	url = https://github.com/beatrizsantiago/siscop-production.git
+[submodule "siscop-inventory"]
+	path = siscop-inventory
+	url = https://github.com/beatrizsantiago/siscop-inventory.git
+[submodule "siscop-sales"]
+	path = siscop-sales
+	url = https://github.com/beatrizsantiago/siscop-sales.git
+[submodule "siscop-farms"]
+	path = siscop-farms
+	url = https://github.com/beatrizsantiago/siscop-farms.git
+[submodule "siscop-root"]
+	path = siscop-root
+	url = https://github.com/beatrizsantiago/siscop-root.git
+[submodule "siscop-goals"]
+	path = siscop-goals
+	url = https://github.com/beatrizsantiago/siscop-goals.git
+[submodule "siscop-mobile"]
+	path = siscop-mobile
+	url = https://github.com/beatrizsantiago/siscop-mobile.git
