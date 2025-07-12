@@ -38,6 +38,6 @@ O sistema foi estruturado utilizando a arquitetura de **microfrontend**, com div
 ## 🚀 Getting Started
 
 Cada projeto possui instruções específicas para configuração e execução no modo de desenvolvimento.  
-Para o ecossistema web, recomenda-se iniciar pelo repositório [`siscop-root`](https://github.com/beatrizsantiago/siscop-root), responsável por integrar os demais microfrontends via **Module Federation**.
+Para o ecossistema web, inicie seguindos as instruções do repositório [`siscop-root`](https://github.com/beatrizsantiago/siscop-root), responsável por integrar os demais microfrontends via **Module Federation**.
 
 ---
