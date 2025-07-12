@@ -22,3 +22,6 @@
 [submodule "siscop-mobile"]
 	path = siscop-mobile
 	url = https://github.com/beatrizsantiago/siscop-mobile.git
+[submodule "siscop-products"]
+	path = siscop-products
+	url = https://github.com/beatrizsantiago/siscop-products
