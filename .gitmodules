@@ -1,6 +1,3 @@
-[submodule "agro-core"]
-	path = agro-core
-	url = https://github.com/beatrizsantiago/agro-core
 [submodule "siscop-production"]
 	path = siscop-production
 	url = https://github.com/beatrizsantiago/siscop-production.git
@@ -19,9 +16,6 @@
 [submodule "siscop-goals"]
 	path = siscop-goals
 	url = https://github.com/beatrizsantiago/siscop-goals.git
-[submodule "siscop-mobile"]
-	path = siscop-mobile
-	url = https://github.com/beatrizsantiago/siscop-mobile.git
 [submodule "siscop-products"]
 	path = siscop-products
 	url = https://github.com/beatrizsantiago/siscop-products
