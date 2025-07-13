@@ -24,18 +24,18 @@ O sistema web foi desenvolvido com base na arquitetura de **microfrontends**, ga
 
 ### 🔧 Configurações do Firebase
 
-1. **Criar conta**
+<b>1. Criar conta</b>
 
   - Crie uma conta ou [acesse o console](https://console.firebase.google.com/) do Firebase usando sua conta Google.
 
-2. **Criar um novo projeto**
+<b>2. Criar um novo projeto no Firebase</b>
 
   - Siga este [guia oficial](https://firebase.google.com/docs/web/setup) para criar um novo projeto.
   - Após criar o projeto, acesse a aba Configurações do Projeto (ícone de engrenagem no menu lateral).
   - Na seção Suas Apps, clique em "Web" para registrar uma nova aplicação Web.
   - Ao finalizar o registro, o Firebase irá exibir o seu Firebase Config — um objeto contendo informações como apiKey, projectId, storageBucket, entre outros.
 
-3. **Configurar variáveis de ambiente**
+<b>3. Configurar variáveis de ambiente</b>
 
 > Um arquivo de exemplo chamado ```.env.example``` está disponível no projeto. Use-o como base para criar o seu arquivo de configuração:
 
@@ -58,14 +58,14 @@ O sistema web foi desenvolvido com base na arquitetura de **microfrontends**, ga
   VITE_FIREBASE_APP_ID={{ APP_ID }}
   ```
 
-4. **Habilitar Autenticação e Firestore**
+<b>4. Habilitar Autenticação e Firestore</b>
 
   No console do Firebase, acesse:
 
   - [Autenticação](https://firebase.google.com/docs/auth/web/email-link-auth): Habilite o método de email/senha e o login com o google para autenticação.
   - [Firestore](https://firebase.google.com/docs/firestore/quickstart): Crie um banco de dados Firestore.
 
-5. **Configurar regras do Firestore**
+<b>5. Configurar regras do Firestore</b>
 
   No Firestore, adicione as [regras de acesso](https://firebase.google.com/docs/firestore/security/get-started) abaixo (configuração disponível na aba de "Regras"):
 
