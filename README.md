@@ -22,7 +22,7 @@ O sistema web foi desenvolvido com base na arquitetura de **microfrontends**, ga
 
 > 📍 A partir da **pasta raiz do workspace**, siga as instruções abaixo para executar o microfrontend com Docker:
 
-#### 🔧 Configurações do Firebase
+### 🔧 Configurações do Firebase
 
 1. **Criar conta**
 
@@ -80,7 +80,7 @@ O sistema web foi desenvolvido com base na arquitetura de **microfrontends**, ga
     }
   ```
 
-#### 🔧 Configurações do Google Maps
+### 🔧 Configurações do Google Maps
 
 > Para utilizar o Google Maps no projeto é necessário configurar uma chave de API na plataforma da Google Cloud.
 
@@ -107,7 +107,7 @@ O sistema web foi desenvolvido com base na arquitetura de **microfrontends**, ga
 VITE_JAVASCRIPT_MAPS_API={{ MAPS_API_KEY }}
 ```
 
-#### ▶️ Executando com Docker
+### ▶️ Executando com Docker
 
 > 💡 Certifique-se de estar na **pasta raiz do workspace** e de ter o **Docker instalado** antes de executar o comando abaixo:
 
