@@ -80,6 +80,42 @@ O sistema web foi desenvolvido com base na arquitetura de **microfrontends**, ga
     }
   ```
 
+<b>6. Criar índices para consultas</b>
+
+  - Este projeto utiliza de consultas compostas para as notificações, por isso você precisará [criar índices](https://firebase.google.com/docs/firestore/query-data/indexing) no Firestore. Isso pode ser feito diretamente pelo console (configuração disponível na aba de "Índices") ou seguindo as mensagens de erro que o Firestore retorna no log da aplicação.
+  - Este são os índices do projeto:
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID da coleção</th>
+        <th>Campos indexados</th>
+        <th>Escopo da consulta</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>sales</td>
+        <td>farm_id (Crescente), created_at (Crescente), __name__ (Crescente)</td>
+        <td>Coleta</td>
+        <td>Ativado</td>
+      </tr>
+      <tr>
+        <td>inventory</td>
+        <td>farm_id (Crescente), state (Crescente), created_at (Crescente), __name__ (Crescente)</td>
+        <td>Coleta</td>
+        <td>Ativado</td>
+      </tr>
+      <tr>
+        <td>goals</td>
+        <td>farm_id (Crescente), finished (Decrescente), kind (Crescente) ,created_at (Crescente), __name__ (Decrescente)</td>
+        <td>Coleta</td>
+        <td>Ativado</td>
+      </tr>
+    </tbody>
+  </table>
+
 ### 🔧 Configurações do Google Maps
 
 > Para utilizar o Google Maps no projeto é necessário configurar uma chave de API na plataforma da Google Cloud.
@@ -117,19 +153,3 @@ docker-compose up --build
 
 > 🛠️ Para utilizar o projeto **sem Docker**, é necessário acessar cada pasta individualmente e seguir as instruções específicas de configuração.  
 > Cada projeto possui instruções no seu respectivo **README**, incluindo detalhes sobre a configuração do ambiente.
-
----
-
-## 🎨 Design System
-
-- [`agro-core`](https://github.com/beatrizsantiago/agro-core) — Design system utilizado para unificar a identidade visual e componentes compartilháveis do ecossistema.
-
-> 📍 Acesse a pasta do `agro-core`, instale as dependências e siga as instruções do **README** para visualizar a documentação corretamente.
-
----
-
-## 📱 Mobile
-
-- [`siscop-mobile`](https://github.com/beatrizsantiago/siscop-mobile) — Aplicativo móvel desenvolvido com React Native, focado em acessibilidade e uso em campo.
-
->📍 Acesse a pasta do `siscop-mobile`, instale as dependências e siga as instruções do **README** para configurar o ambiente corretamente.
