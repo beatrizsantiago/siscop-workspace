@@ -24,88 +24,88 @@ O sistema web foi desenvolvido com base na arquitetura de **microfrontends**, ga
 
 #### 🔧 Configurações do Firebase
 
-  1. **Criar conta**
+1. **Criar conta**
 
-    - Crie uma conta ou [acesse o console](https://console.firebase.google.com/) do Firebase usando sua conta Google.
+  - Crie uma conta ou [acesse o console](https://console.firebase.google.com/) do Firebase usando sua conta Google.
 
-  2. **Criar um novo projeto**
+2. **Criar um novo projeto**
 
-    - Siga este [guia oficial](https://firebase.google.com/docs/web/setup) para criar um novo projeto.
-    - Após criar o projeto, acesse a aba Configurações do Projeto (ícone de engrenagem no menu lateral).
-    - Na seção Suas Apps, clique em "Web" para registrar uma nova aplicação Web.
-    - Ao finalizar o registro, o Firebase irá exibir o seu Firebase Config — um objeto contendo informações como apiKey, projectId, storageBucket, entre outros.
+  - Siga este [guia oficial](https://firebase.google.com/docs/web/setup) para criar um novo projeto.
+  - Após criar o projeto, acesse a aba Configurações do Projeto (ícone de engrenagem no menu lateral).
+  - Na seção Suas Apps, clique em "Web" para registrar uma nova aplicação Web.
+  - Ao finalizar o registro, o Firebase irá exibir o seu Firebase Config — um objeto contendo informações como apiKey, projectId, storageBucket, entre outros.
 
-  3. **Configurar variáveis de ambiente**
+3. **Configurar variáveis de ambiente**
 
-  > Um arquivo de exemplo chamado ```.env.example``` está disponível no projeto. Use-o como base para criar o seu arquivo de configuração:
+> Um arquivo de exemplo chamado ```.env.example``` está disponível no projeto. Use-o como base para criar o seu arquivo de configuração:
 
-    ```bash
-    cp .env.example .env
-    ```
+  ```bash
+  cp .env.example .env
+  ```
 
-    3.1. Crie um arquivo chamado `.env` na raiz do workspace.
+  3.1. Crie um arquivo chamado `.env` na raiz do workspace.
 
-    3.2. Copie e preencha a estrutura abaixo com os dados fornecidos pelo Firebase:
+  3.2. Copie e preencha a estrutura abaixo com os dados fornecidos pelo Firebase:
 
-    ```js
-    // .env
+  ```js
+  // .env
 
-    VITE_FIREBASE_API_KEY={{ API_KEY }}
-    VITE_FIREBASE_AUTH_DOMAIN={{ DOMINIO.firebaseapp.com }}
-    VITE_FIREBASE_PROJECT_ID={{ PROJECT_ID }}
-    VITE_FIREBASE_STORAGE_BUCKET={{ BUCKET.appspot.com }}
-    VITE_FIREBASE_MESSAGING_SENDER_ID={{ SENDER_ID }}
-    VITE_FIREBASE_APP_ID={{ APP_ID }}
-    ```
+  VITE_FIREBASE_API_KEY={{ API_KEY }}
+  VITE_FIREBASE_AUTH_DOMAIN={{ DOMINIO.firebaseapp.com }}
+  VITE_FIREBASE_PROJECT_ID={{ PROJECT_ID }}
+  VITE_FIREBASE_STORAGE_BUCKET={{ BUCKET.appspot.com }}
+  VITE_FIREBASE_MESSAGING_SENDER_ID={{ SENDER_ID }}
+  VITE_FIREBASE_APP_ID={{ APP_ID }}
+  ```
 
-  4. **Habilitar Autenticação e Firestore**
+4. **Habilitar Autenticação e Firestore**
 
-    No console do Firebase, acesse:
+  No console do Firebase, acesse:
 
-    - [Autenticação](https://firebase.google.com/docs/auth/web/email-link-auth): Habilite o método de email/senha e o login com o google para autenticação.
-    - [Firestore](https://firebase.google.com/docs/firestore/quickstart): Crie um banco de dados Firestore.
+  - [Autenticação](https://firebase.google.com/docs/auth/web/email-link-auth): Habilite o método de email/senha e o login com o google para autenticação.
+  - [Firestore](https://firebase.google.com/docs/firestore/quickstart): Crie um banco de dados Firestore.
 
-  5. **Configurar regras do Firestore**
+5. **Configurar regras do Firestore**
 
-    No Firestore, adicione as [regras de acesso](https://firebase.google.com/docs/firestore/security/get-started) abaixo (configuração disponível na aba de "Regras"):
+  No Firestore, adicione as [regras de acesso](https://firebase.google.com/docs/firestore/security/get-started) abaixo (configuração disponível na aba de "Regras"):
 
-    ```bash
-      rules_version = '2';
-      service cloud.firestore {
-        match /databases/{database}/documents {
-          match /{document=**} {
-            allow read, write: if true;
-          }
+  ```bash
+    rules_version = '2';
+    service cloud.firestore {
+      match /databases/{database}/documents {
+        match /{document=**} {
+          allow read, write: if true;
         }
       }
-    ```
+    }
+  ```
 
 #### 🔧 Configurações do Google Maps
 
 > Para utilizar o Google Maps no projeto é necessário configurar uma chave de API na plataforma da Google Cloud.
 
-  1. **Acesse o Console do Google Cloud:**
+1. **Acesse o Console do Google Cloud:**
 
-    [https://console.cloud.google.com/](https://console.cloud.google.com/)
+   [https://console.cloud.google.com/](https://console.cloud.google.com/)
 
-  2. **Crie um novo projeto** (ou selecione um existente).
+2. **Crie um novo projeto** (ou selecione um existente).
 
-  3. No menu lateral, vá em **"APIs e serviços"**.
+3. No menu lateral, vá em **"APIs e serviços"**.
 
-  4. **Habilite as seguintes APIs:**
+4. **Habilite as seguintes APIs:**
 
-    - Maps JavaScript API
-    - Maps SDK for Android
-    - Maps SDK for iOS
+   - Maps JavaScript API
+   - Maps SDK for Android
+   - Maps SDK for iOS
 
-  5. Vá para **"Chaves e credenciais"** e clique em **"Criar credenciais" > "Chave de API"**.
+5. Vá para **"Chaves e credenciais"** e clique em **"Criar credenciais" > "Chave de API"**.
 
-  6. No arquivo `.env` adicione a chave api do google maps, como no exemplo abaixo:
+6. No arquivo `.env` adicione a chave api do google maps, como no exemplo abaixo:
 
-  ```js
-  // .env
-  VITE_JAVASCRIPT_MAPS_API={{ MAPS_API_KEY }}
-  ```
+```js
+// .env
+VITE_JAVASCRIPT_MAPS_API={{ MAPS_API_KEY }}
+```
 
 #### ▶️ Executando com Docker
 
