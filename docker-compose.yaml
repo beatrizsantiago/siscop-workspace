@@ -1,0 +1,86 @@
+version: '3.8'
+
+x-common-env: &common-env
+  env_file: .env
+
+services:
+  root:
+    build:
+      context: ./siscop-root
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    <<: *common-env
+    networks:
+      - siscop
+    depends_on:
+      - products
+      - farms
+      - inventory
+      - sales
+      - production
+      - goals
+
+  products:
+    build:
+      context: ./siscop-products
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    <<: *common-env
+    networks:
+      - siscop
+
+  farms:
+    build:
+      context: ./siscop-farms
+      dockerfile: Dockerfile
+    ports:
+      - "3002:3002"
+    <<: *common-env
+    networks:
+      - siscop
+
+  inventory:
+    build:
+      context: ./siscop-inventory
+      dockerfile: Dockerfile
+    ports:
+      - "3003:3003"
+    <<: *common-env
+    networks:
+      - siscop
+
+  sales:
+    build:
+      context: ./siscop-sales
+      dockerfile: Dockerfile
+    ports:
+      - "3004:3004"
+    <<: *common-env
+    networks:
+      - siscop
+
+  production:
+    build:
+      context: ./siscop-production
+      dockerfile: Dockerfile
+    ports:
+      - "3005:3005"
+    <<: *common-env
+    networks:
+      - siscop
+
+  goals:
+    build:
+      context: ./siscop-goals
+      dockerfile: Dockerfile
+    ports:
+      - "3006:3006"
+    <<: *common-env
+    networks:
+      - siscop
+
+networks:
+  siscop:
+    driver: bridge
